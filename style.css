@@ -1,79 +1,8 @@
-body{
+/* Global Styles */
+body {
   margin: 0;
   font-family: Poppins;
-}
-
-.app-header {
-  background: url(/image/magic.jpg) no-repeat;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-.app-header nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.app-header nav ul li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.app-header nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.app-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-/* Product section */
-.product-card img {
-  width: 100%;
-  height: 90%;
-
-}
-
-.product-section{
-  width: 100%;
-  margin: auto;
-  max-width: 100%;
-  text-align: center;
-  padding-top: 10px;
-  transition: transform .5s;
-}
-
-.more-products-section{
-  width: 100%;
-  margin: auto;
-  margin-top: 50px;
-  max-width: 100%;
-  text-align: center;
-  padding-top: 10px;
-  transition: transform .5s;
-}
-
-.product-grid .product-card {
-  width: 70%;
-  margin-bottom: 80px;
-  filter: drop-shadow(0 30px 20px #0009);
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 0px;
-}
-
-p {
-  margin-top: 40px;
+  animation: changeBackground 10s infinite;
 }
 
 a {
@@ -81,23 +10,113 @@ a {
   text-decoration: none;
 }
 
-.product-grid .product-card{
-  background-color: #EEEEE6;
+p {
+  margin-top: 40px;
+}
+
+/* Header Styles */
+.app-header {
+  background-color: #333;
+  color: #fff;
   padding: 20px;
-  border-radius: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.app-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-header nav ul li {
+  margin-right: 20px;
+}
+
+.app-header nav ul li:last-child {
+  margin-right: 0;
+}
+
+.app-header nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.app-header nav a:hover {
+  color: #ccc;
+}
+
+.app-header nav .burger {
+  display: none;
+  cursor: pointer;
+}
+
+.app-header nav .burger span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.app-header nav .burger span:last-child {
+  margin-bottom: 0;
+}
+
+.app-header nav .burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.app-header nav .burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.app-header nav .burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Main Styles */
+.app-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Product Styles */
+.product-section {
+  width: 100%;
+  margin: auto;
+  max-width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  transition: transform 0.5s;
+}
+
+.more-products-section {
+  width: 100%;
+  margin: auto;
+  margin-top: 50px;
+  max-width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  transition: transform 0.5s;
 }
 
 .product-grid {
-  font-weight: 500;
-  font-size: large;
-}
-
-.product-grid {
-  letter-spacing: 2px;
-  font-size: small;
-}
-
-.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0px;
   background-color: #353432;
   color: #eee;
   border: none;
@@ -106,90 +125,59 @@ a {
   border-radius: 20px;
 }
 
- .subtitle {
-            color: #666;
-            margin-bottom: 40px;
-            font-size: 1.1rem;
-        }
+.product-grid .product-card {
+  width: 40%;
+  height: 30%;
+  filter: drop-shadow(0 30px 20px #0009);
+  background-color: #EEEEE6;
+  padding: 50px;
+  border-radius: 20px;
+}
 
-        .icons-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-            margin-bottom: 30px;
-        }
+.product-grid .product-card img {
+  width: 100%;
+  height: 90%;
+}
 
-        .social-icon {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            color: white;
-            font-size: 24px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        /* Social Media Brand Colors */
-        .facebook { background: #3b5998; }
-        .twitter { background: #1da1f2; }
-        .instagram { background: #e4405f; }
-        .youtube { background: #cd201f; }
-        .tiktok { background: #000000; }
-
-        /* Hover Effects */
-        .social-icon:hover {
-            transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Tooltip */
-        .social-icon::after {
-            content: attr(data-platform);
-            position: absolute;
-            bottom: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            white-space: nowrap;
-            opacity: 0;
-            transition: opacity 0.3s;
-            pointer-events: none;
-        }
-
-        .social-icon:hover::after {
-            opacity: 1;
-        }
-
+/* Responsive Styles */
 @media only screen and (max-width: 992px) {
-  .listProduct{
-      grid-template-columns: repeat(3, 1fr);
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* mobile */
 @media only screen and (max-width: 768px) {
-  .listProduct{
-      grid-template-columns: repeat(2, 1fr);
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .app-header nav ul {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .app-header nav ul li {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .app-header nav .burger {
+    display: block;
+  }
+
+  .app-header nav ul.show {
+    display: flex;
   }
 }
 
-/* Background color changer */
-body {
-  margin: 0;
-  font-family: Poppins;
-  animation: changeBackground 10s infinite;
-}
-
+/* Background Color Changer */
 @keyframes changeBackground {
   0% {
     background-color: #3498db;
