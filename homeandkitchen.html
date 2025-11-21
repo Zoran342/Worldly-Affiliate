@@ -3,21 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon Affiliate Website</title>
+    <title>Worldly Affiliate</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="https://fabiennekervella.com/wp-content/uploads/2020/12/affiliation-amazon.jpg">
+
+      <script>
+    // Highlight Active Navigation Link Automatically
+    document.addEventListener("DOMContentLoaded", function () {
+        const currentPage = window.location.pathname.split("/").pop(); 
+        const navLinks = document.querySelectorAll("nav ul li a");
+
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute("href");
+
+            if (linkPage === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    });
+</script>
 </head>
 <body>
     <!-- Header section -->
     <header class="app-header">
-        <h1>Amazon Affiliate Website</h1>
+        <h1>Worldly Affiliate</h1>
         <nav>
             <ul>
                 <li><a href="index.html" aria-label="Home">Home</a></li>
                 <li><a href="electronics.html" aria-label="Electronics">Electronics</a></li>
                 <li><a href="fashion.html" aria-label="Fashion">Fashion</a></li>
                 <li><a href="homeandkitchen.html" aria-label="Home & Kitchen">Home & Kitchen</a></li>
-                <li><a href="chat.html" aria-label="chat">Chat</a></li>
+                <li><a href="https://buy.stripe.com/fZu6oJ1pi4zk2wt1h7d3i00" aria-label="Donations">Donations</a></li>
             </ul>
             <div class="burger">
                 <span></span>
@@ -36,14 +52,35 @@
                 <!-- Product 1 -->
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/61v4nkOr05L._AC_SX679_.jpg" alt="Product 1" loading="lazy">
-                    <h3>Product 1</h3>
+                    <h3>BESWOOD 10" Premium Chromium-plated Steel Blade Electric Deli Meat Cheese Food Slicer with Serving Plate Commercial and for Home use 240W BESWOOD250RX</h3>
+                    <h>About this item</h>
+                    <div class="text-container">
+    <p class="text">
+        Premium Chromium-plated Steel Blade with protection against corrosion, there is no need to sharpen the blade frequently
+Double Illuminated ON/OFF Switch 24V to avoid power shock for best protection.
+Removable Serving plate specially designed for BESWOOD slicers brings more convenient for cleaning.
+Slicing meat, cheese, veggies, ham, fruit precisely
+USA standard approved: ETL Listed & Certified
+    </p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $348.00</p>
                     <a href="https://amzn.to/40KYndY" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
 
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/41B411wTW3L._AC_SL1080_.jpg" alt="Product 1" loading="lazy">
-                    <h3>Product 1</h3>
+                    <h3>Yatoshi Electric Sharpener, 50-Watt, Diamond Abrasives and Precision Angle Guides, 20-Degree Straight-Edge and Serrated Knives, 3 Stage</h3>
+                    <h>About this item</h>
+                    <div class="text-container">
+    <p class="text">
+        Powerful 50-Watt Motor – Delivers fast and consistent sharpening with professional results for even the toughest knives.
+3-Stage Precision Sharpening System – Features Coarse, Fine Honing, and Polishing stages to restore, refine, and smooth your blades for razor-sharp results every time.
+    </p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $99.99</p>
                     <a href="https://amzn.to/4jScPJR" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
@@ -51,7 +88,14 @@
                 <!-- Product 2 -->
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/71c2RiW3Z9L._AC_SL1500_.jpg" alt="Product 2" loading="lazy">
-                    <h3>Product 2</h3>
+                    <h3>Yogasleep Dohm (White/Gray) The Original White Noise Machine, Relaxing Natural Sound from a Real Fan, Sleep Aid & Noise Cancelling for Adults & Baby, Office Privacy & Meditation, Baby Registry</h3>
+                    <h>About this item</h>
+                    <div class="text-container">
+    <p class="text">ORIGINAL SLEEP SOUND MACHINE: Beloved by millions since 1962, the Dohm was the first white noise machine ever created. It features our signature sound: natural, comforting, fan-based white noise—without the annoyance of actual moving air.
+CUSTOMIZED SLEEP EXPERIENCE: The Dohm is designed to adapt to your unique sleep needs. Its dual speed settings let you fine-tune the tone and volume, whether lulling your baby into dreamland, creating an office environment, or calming your pets.</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $49.99</p>
                     <a href="https://amzn.to/4gudpdP" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
@@ -59,14 +103,28 @@
                 <!-- Product 3 -->
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/51eX3WyzEkL._AC_SL1500_.jpg" alt="Product 3" loading="lazy">
-                    <h3>Product 3</h3>
+                    <h3>SHEEX - Original Performance Sheets Set (Queen) Navy - Cooling Sheets - Moisture Wicking - 1 Flat Cooling Sheet, 1 Fitted Cooling Sheet, 2 Pillow Covers - Wrinkle Free - Sleep Aid</h3>
+                    <h>About this item</h>
+                    <div class="text-container">
+    <p class="text">SHEEX Original Performance Sheets - Transfers moisture away from your skin, helping to reduce sweating, keeping you dry and comfy as you sleep. Full and Queen sheet set includes 1 fitted sheet, 1 flat sheet, and 2 standard pillowcases in Navy.
+Our RIDICULOUSLY SOFT Fabric Breathes - Our cooling sheets, pillows, and beyond will help prevent overheating as you sleep. Proudly designed in the USA and imported. 87% polyester and 13% spandex for maximum breathability.</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $202.30</p>
                     <a href="https://amzn.to/4ht7NBP" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
 
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/311JIYlQ9OL.jpg" alt="Product 3" loading="lazy">
-                    <h3>Product 3</h3>
+                    <h3>XLERATOR XL-SB 1.1N High Speed Commercial Hand Dryer, Brushed Stainless Cover, Excel Dryer, Automatic Sensor, Surface Mounted, Noise Reduction Nozzle, LEED Credits 12.2 Amps 110/120V (2 Pack)</h3>
+                    <h>About this item</h>
+                    <div class="text-container">
+    <p class="text">High-Speed, ENERGY EFFICIENT Hand Dryer. Hygienic, Touchless Hand Wash Solution for Industrial and Commercial Restrooms
+80% Less Energy Than Conventional Hand Dryers. *Adjustable Speed and Heat Option Helps Prevent the Spread of Germs. 8-10 Second Dry Time</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $1,700.00</p>
                     <a href="https://amzn.to/419vBVC" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
@@ -80,14 +138,28 @@
                 <!-- Product 4 -->
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/61LjCOtrqKL._AC_SL1500_.jpg" alt="Product 4" loading="lazy">
-                    <h3>Product 4</h3>
+                    <h3>Children's Factory 26" Round Bean Bag, Bean Bag Chair with Water-Resistant Cover for Kids, Flexible Seating for Classroom Elementary, Easy to Clean, Blue</h3>
+                    <h>About this item</h>
+                    <div class="text-container">
+    <p class="text">100% Polyurethane
+FLEXIBLE SEATING FOR CLASSROOMS AND HOMES: This cozy bean bag chair molds to a child’s shape, providing a relaxed, flexible seating option for reading corners, socializing, or lounging.</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $133.99</p>
                     <a href="https://amzn.to/3CGBIaO" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
 
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/71A+74Qu24L._AC_SL1500_.jpg" alt="Product 4" loading="lazy">
-                    <h3>Product 4</h3>
+                    <h3>Title: Advent Candles Set of 4 – Made in the USA None Drip Advent Pillar Candles – Unscented Purple & Pink Advent Candles for Church and Home Advent Décor decoration Advent Wreaths Rings Candle Holder</h3>
+                    <h>About this item</h>
+                    <div class="text-container">
+    <p class="text">MADE IN THE USA! With Eco Friendly Materiel – Made Locally to Insure the Highest Quality Control.
+PREMIUIM QUALITY! Made of the Highest Quality Wax and 100% Cotton wicks - Ensuring a Smooth Flame and Slow Burn. Smokes Less, Drips Less, Burns longer Than Any Other Advent Pillar Candle Set.</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $39.99</p>
                     <a href="https://amzn.to/3QaPW6Y" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
@@ -95,7 +167,14 @@
                 <!-- Product 5 -->
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/71-autqVuxL._AC_SL1000_.jpg" alt="Product 5" loading="lazy">
-                    <h3>Product 5</h3>
+                    <h3>iKNOW FOTO 5 Pieces Vintage World Map Canvas Prints Push Pin Wall Art Decor Trace Travel Marks The Map of The World Antique Framed Picture for Living Room Office 16x40inx5</h3>
+                    <h>About this item</h>
+                    <div class="text-container">
+    <p class="text">Size: 16x40inchx5pcs Ready to Hang
+High definition picture photo prints on canvas with vivid color on thick high quality canvas to create the look and feel of the original nature and masterpiece</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $189.98</p>
                     <a href="https://amzn.to/3CxtjXf" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
@@ -103,7 +182,14 @@
                 <!-- Product 6 -->
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/71QwF7-hipL._AC_SL1500_.jpg" alt="Product 6" loading="lazy">
-                    <h3>Product 6</h3>
+                    <h3>NUWATT 12PK 6" Gimbal LED Recessed Lighting Retrofit, 5CCT 2700K/3000K/3500K/4000K/5000K, Dimmable, High Output 1200LM, 16W, 90CRI Adjustable Recessed Light 6 Inch Can Light for Sloped Ceilings, ETL</h3>
+                    <h>About this item</h>
+                    <div class="text-container">
+    <p class="text">Precise Lighting Control: The Nuwatt Eyeball Can Light features a gimbal lens that allows you to adjust the light beam direction with precision up to 40-degrees, highlighting specific areas or objects in your space effortlessly.
+High Brightness: The Nuwatt Retrofit Gimbal Light offers an impressive 750 lumens of bright and energy-efficient illumination, ensuring ample light output to effectively illuminate your space.</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $254.99</p>
                     <a href="https://amzn.to/3EyJhRy" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
@@ -111,7 +197,14 @@
                 <!-- Product 6 -->
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/61PWeMX8WJL._AC_SL1500_.jpg" alt="Product 6" loading="lazy">
-                    <h3>Product 6</h3>
+                    <h3>200 PCS LED Foam Sticks, Bulk Glow Sticks, Foam Glow Sticks for Wedding with 3 Modes Colorful Flashing, Glow in the Dark Party Supplies for Wedding, Raves, Concert, Sporting Events</h3>
+                    <h>About this item</h>
+                    <div class="text-container">
+    <p class="text">Glow Stick Bulk Party Pack: Press the power button to switch between the 3 different light up modes, Quick flashing, Slow flashing, and Alternately flashing. Change the mode you like, enjoy foam sticks with a good mood when joining party with your friends.
+Infinite Glow In The Dark Fun: Spice up your glow parties with these foam glow sticks in the dark party favors and decorations or use as giveaway toys. Perfect for Christmas, Halloween, birthday parties, weddings, concerts, bar, sporting events, raves.</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $179.99</p>
                     <a href="https://amzn.to/42NqLyA" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
@@ -124,6 +217,45 @@
         <p>&copy; 2025 Amazon Affiliate Website</p>
     </footer>
 
-    <script src="menu.js"></script>
+    <a href="#" id="toTopBtn" aria-label="Back to top">↑</a>
+
+    <script>
+    const toTopBtn = document.getElementById("toTopBtn");
+
+    // Show button after scrolling 300px
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            toTopBtn.classList.add("show");
+        } else {
+            toTopBtn.classList.remove("show");
+        }
+    });
+
+    // Smooth scroll to top
+    toTopBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+
+<script>
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const container = this.parentElement;
+
+            container.classList.toggle('expanded');
+
+            if (container.classList.contains('expanded')) {
+                this.textContent = "See Less";
+            } else {
+                this.textContent = "See More";
+            }
+        });
+    });
+</script>
+<script src="index.js"></script>
 </body>
 </html>

@@ -3,21 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon Affiliate Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Worldly Affiliate</title>
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://fabiennekervella.com/wp-content/uploads/2020/12/affiliation-amazon.jpg">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
+
+    <script>
+    // Highlight Active Navigation Link Automatically
+    document.addEventListener("DOMContentLoaded", function () {
+        const currentPage = window.location.pathname.split("/").pop(); 
+        const navLinks = document.querySelectorAll("nav ul li a");
+
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute("href");
+
+            if (linkPage === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    });
+</script>
+
 </head>
+
 <body>
-    <!-- Header section -->
+    <!-- Header -->
     <header class="app-header">
-        <h1>Amazon Affiliate Website</h1>
-        <nav>
+        <h1>Worldly Affiliate</h1>
+
+        <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="index.html" aria-label="Home">Home</a></li>
-                <li><a href="electronics.html" aria-label="Electronics">Electronics</a></li>
-                <li><a href="fashion.html" aria-label="Fashion">Fashion</a></li>
-                <li><a href="homeandkitchen.html" aria-label="Home & Kitchen">Home & Kitchen</a></li>
-                <li><a href="chat.html" aria-label="chat">Chat</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="electronics.html">Electronics</a></li>
+                <li><a href="fashion.html">Fashion</a></li>
+                <li><a href="homeandkitchen.html">Home & Kitchen</a></li>
+                <li><a href="https://buy.stripe.com/fZu6oJ1pi4zk2wt1h7d3i00" target="_blank" rel="noopener">Donations</a></li>
             </ul>
             <div class="burger">
                 <span></span>
@@ -27,106 +53,251 @@
         </nav>
     </header>
 
-    <!-- Main content section -->
+    <!-- Main Content -->
     <main class="app-main">
-        <!-- Featured Products section -->
+
+        <!-- Featured Products -->
         <section class="product-section" aria-label="Featured Products">
             <h2>Featured Products</h2>
+
             <div class="product-grid">
-                <!-- Product 1 -->
+
+                <!-- Product Card Template Example -->
                 <div class="product-card">
-                    <img src="https://m.media-amazon.com/images/I/51NPaIorJiL._AC_SL1000_.jpg" alt="Product 1" loading="lazy">
-                    <h3>Product 1</h3>
+                    <img src="https://m.media-amazon.com/images/I/51NPaIorJiL._AC_SL1000_.jpg" 
+                         alt="Wireless Bluetooth Speaker" loading="lazy">
+                    <h3>Smart Routers, Mesh Wifi, and Networking | Smart Home</h3>
+                    <h>About this item</h>
+                <div class="text-container"><p class="text">VPN SERVER: Archer AX21 Supports both Open VPN Server and PPTP VPN Server
+DUAL-BAND WIFI 6 ROUTER: Wi-Fi 6(802.11ax) technology achieves faster speeds, greater capacity and reduced network congestion compared to the previous gen. All WiFi routers require a separate modem. Dual-Band WiFi routers do not support the 6 GHz band.</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
+                    
                     <p>Price: $79.99</p>
                     <a href="https://amzn.to/3EyGxn5" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
 
-                <!-- Product 2 -->
                 <div class="product-card">
-                    <img src="https://m.media-amazon.com/images/I/71xNVR+bC-L._AC_SL1500_.jpg" alt="Product 2" loading="lazy">
-                    <h3>Product 2</h3>
+                    <img src="https://m.media-amazon.com/images/I/71xNVR+bC-L._AC_SL1500_.jpg" 
+                         alt="High-Speed Laptop Cooling Pad" loading="lazy">
+                    <h3>Govee Bluetooth Meat Thermometer, Wireless Meat Thermometer for Smoker Oven, Digital Grill Thermometer with 2 Probes, Timer Mode, Smart LCD Backlight BBQ Thermometer for Cooking Turkey Fish Beef</h3>
+                    <h>About this item</h>        <div class="text-container">
+    <p class="text">Bluetooth Monitor Remotely: Govee Bluetooth meat thermometer lets you check the temperature of your grill, smoker, or oven from your phone. With this smart BBQ thermometer, you can multitask while grilling.
+Perfectly Cooked Every Time: Browse USDA-recommended temperatures for beef, lamb, chicken, fish, turkey, and pork on the Govee Home app. Keep your grilling efficient and avoid overcooking or burning your food.</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
+
                     <p>Price: $99.95</p>
                     <a href="https://amzn.to/4gu7iGA" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
 
-                <!-- Product 3 -->
                 <div class="product-card">
-                    <img src="https://m.media-amazon.com/images/I/71xa7jk7SJL._AC_SL1500_.jpg" alt="Product 3" loading="lazy">
-                    <h3>Product 3</h3>
+                    <img src="https://m.media-amazon.com/images/I/71xa7jk7SJL._AC_SL1500_.jpg" 
+                         alt="Noise-Cancelling Wireless Headphones" loading="lazy">
+                    <h3>Shark AV2501S AI Ultra Robot Vacuum, with Matrix Clean, Home Mapping, 30-Day Capacity HEPA Bagless Self Empty Base, Perfect for Pet Hair, Wifi, Dark Grey</h3>
+                    <h>About this item</h>
+                                <div class="text-container">
+    <p class="text"> INCREDIBLE SUCTION: Powerful Shark suction picks up dirt and debris on all floor types—tackling even the toughest of messes in your home.
+NO SPOTS MISSED: With Matrix Clean Navigation, the vacuum cleans in a precise matrix grid taking multiple passes over dirt and debris for whole home, deep cleaning coverage.</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $329.99</p>
                     <a href="https://amzn.to/417PEUF" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
 
-                <!-- Product 4 -->
                 <div class="product-card">
-                    <img src="https://m.media-amazon.com/images/I/51fSHzJV5dL._SL1000_.jpg" alt="Product 4" loading="lazy">
-                    <h3>Product 4</h3>
+                    <img src="https://m.media-amazon.com/images/I/51fSHzJV5dL._SL1000_.jpg" 
+                         alt="Smart LED Desk Lamp" loading="lazy">
+                    <h3>Ambient Weather WS-2902 WiFi Smart Weather Station</h3>
+                    <h>About this item</h>
+                                <div class="text-container">
+    <p class="text">COMPLETE WEATHER STATION: (1) Osprey Sensor Array with Rain Cup, and (1) Brilliant, Easy-to-Read LCD Color Display
+AUTHENTIC HYPER-LOCAL DATA: Monitor your actual home and backyard weather conditions with our wireless and Wi-Fi-enabled sensor array measuring wind speed/direction, temperature, humidity, rainfall, UV intensity, and solar radiation</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
+
                     <p>Price: $189.99</p>
                     <a href="https://amzn.to/413UCBH" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
 
-                <!-- Product 5 -->
                 <div class="product-card">
-                    <img src="https://m.media-amazon.com/images/I/61bKpCb+8BL._AC_SL1500_.jpg" alt="Product 5" loading="lazy">
-                    <h3>Product 5</h3>
+                    <img src="https://m.media-amazon.com/images/I/61bKpCb+8BL._AC_SL1500_.jpg" 
+                         alt="Portable USB Power Bank" loading="lazy">
+                    <h3>HP OfficeJet 5255 Wireless All-in-One Color Printer, HP Instant Ink, Works with Alexa (M2U75A)</h3>
+                    <h>About this item</h>
+                                <div class="text-container">
+    <p class="text">Machine_Functions - Scan
+Product_Type - Multifunction - Printer, Copier, Scanner, Fax
+Printer_Type - Inkjet
+Maximum_Print_Speed_Black - 20 ppm
+Maximum_Print_Speed_Color - 20 ppm</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $49.99</p>
                     <a href="https://amzn.to/419xkdy" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
             </div>
         </section>
 
-        <!-- More Products section -->
+        <!-- More Products -->
         <section class="more-products-section" aria-label="More Products">
             <h2>More Products</h2>
+
             <div class="product-grid">
-                <!-- Product 6 -->
+
                 <div class="product-card">
-                    <img src="https://m.media-amazon.com/images/I/81OsEmGZ1dL._AC_SL1500_.jpg" alt="Product 6" loading="lazy">
-                    <h3>Product 6</h3>
+                    <img src="https://m.media-amazon.com/images/I/81OsEmGZ1dL._AC_SL1500_.jpg" 
+                         alt="Smart Wi-Fi Security Camera" loading="lazy">
+                    <h3>Roku Streaming Stick 4K - HDR & Dolby Vision Roku Streaming Device for TV with Voice Remote & Long-Range Wi-Fi - Free & Live TV</h3>
+                    <h>About this item</h>
+                                <div class="text-container">
+    <p class="text">Stunning 4K & Dolby Vision streaming made simple: With America’s #1 TV streaming platform*, exploring popular apps—plus tons of free movies, shows, and live TV—is as easy as it is fun. *Based on hours streamed—Hypothesis Group
+Breathtaking picture quality: Stunningly sharp 4K picture brings out rich detail in your entertainment with four times the resolution of HD. Watch as colors pop off your screen and enjoy lifelike clarity with Dolby Vision and HDR10+</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
+
                     <p>Price: $129.99</p>
                     <a href="https://amzn.to/3EsMEsV" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
 
-                <!-- Product 7 -->
                 <div class="product-card">
-                    <img src="https://m.media-amazon.com/images/I/61hHuYV3vML._AC_SL1000_.jpg" alt="Product 7" loading="lazy">
-                    <h3>Product 7</h3>
+                    <img src="https://m.media-amazon.com/images/I/61hHuYV3vML._AC_SL1000_.jpg" 
+                         alt="Multifunction USB Charging Hub" loading="lazy">
+                    <h3>Tribit XSound Go Bluetooth Speaker, 16W Portable Wireless Speaker with Loud Sound, 24H Playtime, IPX7 Waterproof, Custom EQ, XBass, BT5.3, TWS Pairing, Type-C, Outdoor/Home/Travel/Beach/Shower (Black)</h3>
+                    <h>About this item</h>
+                                <div class="text-container">
+    <p class="text"> Killer Audio: With crystal highs, crisp mids and rich bass, XSound Go creates an immersive listening experience unlike any other. State of the art bass radiators and dual 8W power drivers deliver shocking sound without distortion even at maximum volume. The newly added DSP chip fine-tunes the audio quality for an unparalleled listening adventure.
+Wireless Connection: Don't let cords tie you down. Premium Bluetooth 5.3 technology effortlessly connects to all of your bluetooth-enabled devices up to 150ft range. Press and hold the multifunction button to access the voice input for Siri and Google now.</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $29.99</p>
                     <a href="https://amzn.to/4hKGX80" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
 
-                <!-- Product 8 -->
                 <div class="product-card">
-                    <img src="https://m.media-amazon.com/images/I/71nulLJ9VmL._AC_SL1500_.jpg" alt="Product 8" loading="lazy">
-                    <h3>Product 8</h3>
+                    <img src="https://m.media-amazon.com/images/I/71nulLJ9VmL._AC_SL1500_.jpg" 
+                         alt="Nonstick Cooking Pan Set" loading="lazy">
+                    <h3>Roku Streaming Stick 4K - HDR & Dolby Vision Roku Streaming Device for TV with Voice Remote & Long-Range Wi-Fi - Free & Live TV</h3>
+                    <h>About this item</h>
+                                <div class="text-container">
+    <p class="text">Stunning 4K & Dolby Vision streaming made simple: With America’s #1 TV streaming platform*, exploring popular apps—plus tons of free movies, shows, and live TV—is as easy as it is fun. *Based on hours streamed—Hypothesis Group
+Breathtaking picture quality: Stunningly sharp 4K picture brings out rich detail in your entertainment with four times the resolution of HD. Watch as colors pop off your screen and enjoy lifelike clarity with Dolby Vision and HDR10+</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $41.14</p>
                     <a href="https://amzn.to/4aUQZ4f" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
 
-                <!-- Product 9 -->
                 <div class="product-card">
-                    <img src="https://m.media-amazon.com/images/I/612wQCy8x+L._SL1000_.jpg" alt="Product 9" loading="lazy">
-                    <h3>Product 9</h3>
+                    <img src="https://m.media-amazon.com/images/I/612wQCy8x+L._SL1000_.jpg" 
+                         alt="Smart Digital Air Fryer" loading="lazy">
+                    <h3>Xbox One S 1TB Console [Previous Generation]</h3>
+                    <h>About this item</h>
+                                <div class="text-container">
+    <p class="text">Previous generation bundle includes: Xbox One S 1TB console, one Xbox Wireless Controller (with 3.5mm headset jack), HDMI cable (4K Capable), AC Power cable. 1 Month Xbox Game Pass trial, 14 Day Xbox Live Gold trial
+Play over 2,200 games including more than 200 exclusives and over 600 classics from Xbox 360 and Original Xbox. (Games sold separately.)</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
+
                     <p>Price: $348.00</p>
                     <a href="https://amzn.to/3EoZt7B" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
 
-                <!-- Product 10 -->
                 <div class="product-card">
-                    <img src="https://m.media-amazon.com/images/I/31750hI5MLL._AC_SL1080_.jpg" alt="Product 10" loading="lazy">
-                    <h3>Product 10</h3>
+                    <img src="https://m.media-amazon.com/images/I/31750hI5MLL._AC_SL1080_.jpg" 
+                         alt="LED Home Theater Projector" loading="lazy">
+                    <h3>Google Nest Cam Outdoor or Indoor, Battery - 2nd Generation - 1 Pack</h3>
+                    <h>About this item</h>
+                                <div class="text-container">
+    <p class="text">Nest Cam has built-in intelligence and can tell the difference between a person, animal, and vehicle and send alerts directly through the Google Home app[1], no subscription required.Controller Type:Google Assistant.Connectivity protocol:Bluetooth;Wi-Fi.Power source type:Battery Powered.Operating Temperature : –4°F to 104°F (–20°C to 40°C).
+Easily check in from anywhere 24/7 with 1080p HDR video[1] with night vision, and see what you missed with 3 hours of free event video history[2]; add a Nest Aware subscription (sold separately) for up to 60 days of video history[3]</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $149.98</p>
                     <a href="https://amzn.to/4aOPqVD" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
+
             </div>
         </section>
+
     </main>
 
-    <!-- Footer section -->
+    <!-- Footer -->
     <footer class="app-footer">
-        <p>&copy; 2025 Amazon Affiliate Website</p>
-    </footer>
+        <div class="icons-container">
+            <a href="https://www.facebook.com/profile.php?id=100079912147092" class="social-icon facebook" data-platform="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
 
-    <script src="menu.js"></script>
+            <a href="https://x.com/RicardoHarris17" class="social-icon twitter" data-platform="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+            <a href="https://www.instagram.com/ricardoharris6816/" class="social-icon instagram" data-platform="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.youtube.com/channel/UCy_qSy1APZ4LAiIe29o9y4A" class="social-icon youtube" data-platform="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@ricardoooooo01?is_from_webapp=1&sender_device=pc" class="social-icon tiktok" data-platform="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+
+        <p>&copy; 2025 Worldly Affiliate</p>
+    </footer>
+<a href="#" id="toTopBtn" aria-label="Back to top">↑</a>
+
+<script>
+    const toTopBtn = document.getElementById("toTopBtn");
+
+    // Show button after scrolling 300px
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            toTopBtn.classList.add("show");
+        } else {
+            toTopBtn.classList.remove("show");
+        }
+    });
+
+    // Smooth scroll to top
+    toTopBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+
+<script>
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const container = this.parentElement;
+
+            container.classList.toggle('expanded');
+
+            if (container.classList.contains('expanded')) {
+                this.textContent = "See Less";
+            } else {
+                this.textContent = "See More";
+            }
+        });
+    });
+</script>
+
+    <script src="index.js"></script>
 </body>
 </html>

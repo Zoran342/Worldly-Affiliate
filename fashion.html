@@ -3,21 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon Affiliate Website</title>
+    <title>Worldly Affiliate</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="https://fabiennekervella.com/wp-content/uploads/2020/12/affiliation-amazon.jpg">
+
+      <script>
+    // Highlight Active Navigation Link Automatically
+    document.addEventListener("DOMContentLoaded", function () {
+        const currentPage = window.location.pathname.split("/").pop(); 
+        const navLinks = document.querySelectorAll("nav ul li a");
+
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute("href");
+
+            if (linkPage === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    });
+</script>
 </head>
 <body>
     <!-- Header section -->
     <header class="app-header">
-        <h1>Amazon Affiliate Website</h1>
+        <h1>Worldly Affiliate</h1>
         <nav>
             <ul>
                 <li><a href="index.html" aria-label="Home">Home</a></li>
                 <li><a href="electronics.html" aria-label="Electronics">Electronics</a></li>
-                <li><a href="fashion.html" aria-label="Fashion">Fashion</a></li>
+                <li><a href="fashion.html" class="active"aria-label="Fashion">Fashion</a></li>
                 <li><a href="homeandkitchen.html" aria-label="Home & Kitchen">Home & Kitchen</a></li>
-                <li><a href="chat.html" aria-label="chat">Chat</a></li>
+                <li><a href="https://buy.stripe.com/fZu6oJ1pi4zk2wt1h7d3i00" aria-label="Donations">Donations</a></li>
             </ul>
             <div class="burger">
                 <span></span>
@@ -36,7 +52,14 @@
                 <!-- Product 1 -->
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/61qLG9Ahx3L._AC_SX679_.jpg" alt="Product 1" loading="lazy">
-                    <h3>Product 1</h3>
+                    <h3>NACHILA Nightgowns for Women-Viscose Made from Bamboo, V Neck Sleepshirts Short Sleeve Sleepwear Cool Nightshirt</h3>
+                    <h>About this item</h>
+                <div class="text-container">
+    <p class="text">Cooling & Breathable: 95% Viscose made from Bamboo, 5% Spandex. Cooling nightdress is lightweight and comfortable, keeping your skin breath throughout the night. Women's summer nightshirts offer moisture-wicking and cool performance for your daily wear
+Loose Fit Sleepwear: Women's calf length nightgown with a soft satin trim and v-neckline. The side split can show your leg. Short sleeve womens nightshirt with an asymmetrical hem which flatters a woman's shape, making you sexy and attractive. The invisible tag provides a comfortable sensation</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $37.99</p>
                     <a href="https://amzn.to/4gPpTgB" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
@@ -44,7 +67,14 @@
                 <!-- Product 2 -->
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/814LgdW8uGL._AC_SY695_.jpg" alt="product 2" loading="lazy">
-                    <h3>Product 1</h3>
+                    <h3>OOBEE Birthstone Necklaces for Women, 925 Sterling Silver Gemstone Fine Love Heart Moissanite Necklace, Ideal Birthday Anniversary Mothers Day Jewelry Gifts for Wife Mom Girlfriend Her</h3>
+                    <h>About this item</h>
+                    <div class="text-container">
+    <p class="text">Exquisite Heart Design: The meticulously crafted metal frame complements the sparkling moissanite, creating a mesmerizing visual effect reminiscent. This enchanting necklace is not just jewelry. It's a work of art that adds a captivating melody to the wearer's neck. Make a lasting impression with a piece that symbolizes love and elegance, perfect for gifting or personal indulgence.
+Unmatched Heart Necklace: Crafted from D color VVS1 moissanite shine with incredible clarity and brilliance. The meticulously designed pendant captures light beautifully, making it a standout piece that complements any outfit and occasion. Each stone features a unique traceable code, ensuring its genuineness. Redefine brilliance and choose a timeless allure.</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $179.99</p>
                     <a href="https://amzn.to/3WWcBHY" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
@@ -52,7 +82,14 @@
                 <!-- Product 3 -->
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/51GiWO+13qL._AC_SY695_.jpg" alt="Product 2" loading="lazy">
-                    <h3>Product 2</h3>
+                    <h3>Orthofeet Women's Orthopedic Faux Fur Lined Charlotte Slippers</h3>
+                    <h>About this item</h>
+                    <div class="text-container">
+    <p class="text">Designed with a roomy toe box, this orthopedic women's slipper keeps the pressure off sensitive feet and allows you to move freely, all around the house.
+Featuring a soft faux fur interior (including the insole) keeps feet warm and comfy and an adjustable strap creates a wide opening & offers a perfect fit.</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $89.99</p>
                     <a href="https://amzn.to/4jPrh5g" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
@@ -60,7 +97,14 @@
                 <!-- Product 4 -->
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/61z-oWbUFzL._AC_SY679_.jpg" alt="Product 3" loading="lazy">
-                    <h3>Product 3</h3>
+                    <h3>OUPINKE Women Automatic Watches Luxury Diamond Flywheel Two-Tone Stainless Tungsten Steel Band Moon Phase 24 Hours</h3>
+                    <h>About this item</h>
+                    <div class="text-container">
+    <p class="text">Womens Automatic Watch: It adopts imported original mechanical movement, supports manual winding and self winding, and can stably work for 10 years.
+Ladies' Fashion Watch: Classic hollow tourbillon design, the dial has a 24-hour display sub-dial, the sub-dial with sun and moon pattern distinguishes the day and night.</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $198.00</p>
                     <a href="https://amzn.to/4jR5Xwb" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
@@ -68,7 +112,14 @@
                 <!-- Product 5 -->
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/81ojRbe2oZL._AC_SY695_.jpg" alt="Product 3" loading="lazy">
-                    <h3>Product 3</h3>
+                    <h3>The Sak Sequoia Hobo Bag - Premium Large Leather Women's Handbag for Everyday & Travel - Durable Purse With Zipper Pocket</h3>
+                    <h>About this item</h>
+                    <div class="text-container">
+    <p class="text">STYLISH & SPACIOUS: The Sak Sequoia Hobo Bag is easy to carry and fits all of your everyday womens essentials. With the design of a hobo silhouette, this handbag is perfect for everyday wear.
+PERFECT FOR EVERYDAY TRAVEL: Features a main zipper closure, front zipper pocket, back slit pocket, and an interior with a back wall zipper pocket & 2 front wall multi-pockets.</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $119.00</p>
                     <a href="https://amzn.to/40NZI3L" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
@@ -82,7 +133,14 @@
                 <!-- Product 5 -->
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/61vAEOkITnL._AC_SX679_.jpg" alt="Product 5" loading="lazy">
-                    <h3>Product 5</h3>
+                    <h3>Randolph Eyewear Aviator Sunglasses for Men & Women – Non-Polarized & Polarized Lenses, 23k Gold UV Protection Sunglasses</h3>
+                    <h>About this item</h>
+                    <div class="text-container">
+    <p class="text">CRAFTED FOR EXCEPTIONALISM: A modern evolution of the iconic aviator sunglasses for women and men—crafted to military standards as authentic pilot issue sunglasses. Expertly hand-crafted in the USA through 200 steps over 6 weeks, these are timeless frames made to last a lifetime.
+NON POLARIZED SUNGLASSES: Engineered for precision, our SkyTec lenses use Vector Anti-Reflective and Blue Wave technology for unmatched clarity and contrast. These non polarized sunglasses offer full UVA/UVB protection, making them ideal UV protection glasses for outdoor use.</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $279.00</p>
                     <a href="https://amzn.to/417inZy" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
@@ -90,7 +148,14 @@
                 <!-- Product 6 -->
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/81ZfgXgMk3L._AC_SY695_.jpg" alt="Product 6" loading="lazy">
-                    <h3>Product 6</h3>
+                    <h3>LOUISA SECRET Sparkling Double Heart Birthstone Necklaces for Women, 925 Sterling Silver Fine Jewelry, Pendant Heart Necklaces Birthday Anniversary Christmas Gift for Women Wife Mom Girlfriend Lady</h3>
+                    <h>About this item</h>
+                    <div class="text-container">
+    <p class="text">All Rights Reserved, Please Do Not Copy! The necklacs symbolizes your love for the special one in your life, two hearts entwined together will never be separated, gift this heart necklace to her and she will never forget the deep love between you. Gift it to your mom, grandma, wife, girlfriend or anyone you love on mother's day, birthday, christmas, valentine's day, anniversary or any other special day.
+Best Jewelry Gifts: Match your most intimate relationship with her with our double birthstone necklace, you can gift for your wife, girlfriend, mom, daughter, aunt, or grandma a great surprise on mother's day, birthday, christmas, valentine's day or other special holidays.</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $129.99</p>
                     <a href="https://amzn.to/3WSxOma" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
@@ -98,7 +163,14 @@
                 <!-- Product 7 -->
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/71XAvVEAzgL._AC_SY675_.jpg" alt="Product 7" loading="lazy">
-                    <h3>Product 5</h3>
+                    <h3>Heart Pendant Necklace Gifts for Wife, Engraved 'I LOVE YOU' Gift for Wife, 1-3 Carat Moissanite Necklace, Anniversary Eternity Jewelry Present for Wife, Birthday Gifts for Women</h3>
+                    <h>About this item</h>
+                    <div class="text-container">
+    <p class="text">COMBINE LOVE AND FOREVERNESS - Express your love with this exquisite heart-shaped moissanite necklace, delicately engraved with the words "I LOVE YOU". The heart shape represents single-mindedness, while the moissanite represents eternal love. Made of moissanite, this necklace never loses its brilliance or fire.
+UNPRECEDENTED BRILLIANCE - The cut design of the moissanite was inspired by the gorgeous rose window of Notre Dame Cathedral, this design features extreme cutting that creates perfect, symmetrical facets, resulting in unprecedented extreme brilliance. Its fire reaches the highest level - EX level. Each moissanite has its own code, which can be seen with a magnifying glass, proving its authenticity and your ownership of this precious necklace.</p>
+
+    <span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $166.62</p>
                     <a href="https://amzn.to/3Qw2A0B" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
@@ -106,15 +178,29 @@
                 <!-- Product 8 -->
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/71YFnoc6TNL._AC_SY675_.jpg" alt="Product 8" loading="lazy">
-                    <h3>Product 6</h3>
-                    <p>Price: $139.99</p>
+                    <h3>Anniversary for Gifts Women Wife, 18k Gold Plated Sunflower Necklaces for Women, Anniversary Her Gifts Birthday Gift for Wife You Are My Sunshine Woman's Jewelry Girlfriend Grandma Mom Daughter</h3>
+                    <h>About this item</h>
+<div class="text-container">
+    <p class="text">
+        YOU ARE MY SUNSHINE NECKLACE: This sunflower pendant necklace combines sunflower and heart shapes, engraved with "You are my sunshine", meaning "Where there is sunshine, there are sunflowers!", suitable as Anniversary gifts for women/her/wife/girlfriend, Birthday gifts for women/wife/girlfriend/mom/grandma/daughter ......, send a sunflower necklace gift for her/yourself on any special day
+SUNFLOWER ANNIVERSARY GIFTS FOR WOMEN: Who will be the sunshine that brightens your life? Surprise gift for her with this good sunflower Jewelry. Meeshi 18K gold plated sunflower necklace has shown her how much she means to you, which is elegant and precious, symbolizing positivity and hope, bringing warmth and happiness that she is the sunshine in your life
+</p><span class="toggle-btn">See More</span>
+</div>
+<p>Price: $139.99</p>
                     <a href="https://amzn.to/4gBGzbd" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
 
                 <!-- Product 9 -->
                 <div class="product-card">
                     <img src="https://m.media-amazon.com/images/I/71FGsD8pnFL._AC_SL1317_.jpg" alt="Product 9" loading="lazy">
-                    <h3>Product 6</h3>
+                    <h3>Incrediwear Leg Sleeve 2pk – Full Length Long Leg Sleeve for Leg Pain Relief & Muscle Recovery, Helps Reduce Swelling & Inflammation, Promotes Circulation, Leg Sleeves for Men & Women (Navy, X-Large)</h3>
+                    <h>About this item</h>
+                    <div class="text-container">
+    <p class="text">
+        66% Polyester, 24% Nylon, 10% Lycra Spandex
+ANTI-INFLAMMATORY THERAPY: Unlike traditional leg compression sleeves, braces, or wraps, Incrediwear leg sleeves for women and men provide scientifically proven support. Designed to enhance blood circulation, minimize swelling, and reduce inflammation, they offer effective leg pain relief for acute or chronic joint injuries, osteoarthritis, and post-surgery recovery.
+</p><span class="toggle-btn">See More</span>
+</div>
                     <p>Price: $174.99</p>
                     <a href="https://amzn.to/3EsMx0t" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
@@ -127,6 +213,45 @@
         <p>&copy; 2025 Amazon Affiliate Website</p>
     </footer>
 
-    <script src="menu.js"></script>
+    <a href="#" id="toTopBtn" aria-label="Back to top">↑</a>
+
+    <script>
+    const toTopBtn = document.getElementById("toTopBtn");
+
+    // Show button after scrolling 300px
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            toTopBtn.classList.add("show");
+        } else {
+            toTopBtn.classList.remove("show");
+        }
+    });
+
+    // Smooth scroll to top
+    toTopBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+
+<script>
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const container = this.parentElement;
+
+            container.classList.toggle('expanded');
+
+            if (container.classList.contains('expanded')) {
+                this.textContent = "See Less";
+            } else {
+                this.textContent = "See More";
+            }
+        });
+    });
+</script>
+<script src="index.js"></script>
 </body>
 </html>
