@@ -1,12 +1,22 @@
-// Get the burger and nav elements
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('nav ul');
+const burger = document.querySelector(".burger");
+    const navMenu = document.querySelector("nav ul");
 
-// Add an event listener to the burger element
-burger.addEventListener('click', () => {
-  // Toggle the 'show' class on the nav element
-  nav.classList.toggle('show');
-  
-  // Toggle the 'active' class on the burger element
-  burger.classList.toggle('active');
-});
+    burger.addEventListener("click", () => {
+        burger.classList.toggle("active");
+        navMenu.classList.toggle("open");
+        document.body.classList.toggle("menu-open");
+
+        // ARIA support
+        const expanded = burger.classList.contains("active");
+        burger.setAttribute("aria-expanded", expanded);
+    });
+
+    // Close menu when clicking a link (mobile)
+    document.querySelectorAll("nav ul li a").forEach(link => {
+        link.addEventListener("click", () => {
+            navMenu.classList.remove("open");
+            burger.classList.remove("active");
+            document.body.classList.remove("menu-open");
+            burger.setAttribute("aria-expanded", "false");
+        });
+    });

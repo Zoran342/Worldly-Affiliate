@@ -37,6 +37,7 @@ a {
   text-align: center;
 }
 
+/* Navigation */
 .app-header nav ul {
   list-style: none;
   margin: 0;
@@ -51,11 +52,92 @@ a {
   color: blue;
 }
 
-.app-header nav ul li.active {
+.app-header nav ul li.active,
+nav ul li a.active {
   background-color: blue;
-  color: white;
+  color: white !important;
   padding: 4px 8px;
   border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+/* -------------------------------
+   BURGER MENU (MOBILE)
+-------------------------------- */
+.app-header nav {
+    position: relative;
+}
+
+/* Hide burger by default (desktop) */
+.burger {
+    display: none;
+}
+
+/* Mobile Navigation Panel */
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+/* -------- MOBILE MODE -------- */
+@media only screen and (max-width: 768px) {
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        flex-direction: column;
+        align-items: start;
+        padding: 80px 20px;
+        background: rgba(0, 0, 0, 0.9);
+        transition: right 0.3s ease;
+        z-index: 9998;
+    }
+
+    /* Show slide-in menu */
+    nav ul.open {
+        right: 0;
+    }
+
+    /* Burger visible on mobile */
+    .burger {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        z-index: 9999;
+    }
+
+    .burger span {
+        width: 30px;
+        height: 4px;
+        background: white;
+        display: block;
+        margin: 6px 0;
+        transition: 0.3s ease;
+    }
+
+    /* Burger animation when active */
+    .burger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    /* Disable scrolling when menu is open */
+    body.menu-open {
+        overflow: hidden;
+    }
+
 }
 
 /* ----------------------------------
@@ -89,70 +171,7 @@ a {
   height: 90%;
 }
 
-/* Back to Top Button */
-#toTopBtn {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background: #000;
-    color: #fff;
-    width: 45px;
-    height: 45px;
-    font-size: 24px;
-    text-align: center;
-    line-height: 45px;
-    border-radius: 50%;
-    cursor: pointer;
-    text-decoration: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-    z-index: 9999;
-}
-
-/* Show button when scrolling */
-#toTopBtn.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.text-container {
-    max-width: 500px;
-    margin: 20px auto;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* Initial hidden state: show only 3 lines */
-.text-container .text {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* number of lines shown */
-    -webkit-box-orient: vertical;
-    transition: all 0.3s ease;
-}
-
-/* Expanded text */
-.text-container.expanded .text {
-    -webkit-line-clamp: unset;
-}
-
-/* Button */
-.toggle-btn {
-    display: inline-block;
-    margin-top: 10px;
-    color: blue;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-#toTopBtn:hover {
-    background: #333;
-    transform: scale(1.15);
-}
-
-
+/* Product grid */
 .product-grid {
   background-color: #353432;
   color: black;
@@ -174,16 +193,80 @@ a {
   filter: drop-shadow(0 30px 20px #0009);
 }
 
-.product-card a{
+.product-card a {
   color: #000;
 }
 
-.product-card a:hover{
+.product-card a:hover {
   display: inline-block;
   cursor: pointer;
   transition: background-color 0.3s ease;
   background-color: blue;
   color: white;
+}
+
+/* ----------------------------------
+   Text Block (Read More)
+---------------------------------- */
+.text-container {
+  max-width: 500px;
+  margin: 20px auto;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.text-container .text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  transition: all 0.3s ease;
+}
+
+.text-container.expanded .text {
+  -webkit-line-clamp: unset;
+}
+
+.toggle-btn {
+  display: inline-block;
+  margin-top: 10px;
+  color: blue;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ----------------------------------
+   Back To Top Button
+---------------------------------- */
+#toTopBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #000;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  z-index: 9999;
+}
+
+#toTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#toTopBtn:hover {
+  background: #333;
+  transform: scale(1.15);
 }
 
 /* ----------------------------------
@@ -202,15 +285,6 @@ a {
   gap: 25px;
   margin-bottom: 30px;
 }
-
-nav ul li a.active {
-    background-color: blue;
-    color: white !important;
-    padding: 5px 12px;
-    border-radius: 6px;
-    transition: 0.3s ease;
-}
-
 
 .social-icon {
   display: flex;
@@ -238,36 +312,6 @@ nav ul li a.active {
 .social-icon:hover {
   transform: translateY(-5px) scale(1.1);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.app-header nav .burger {
-  display: none;
-  cursor: pointer;
-}
-
-.app-header nav .burger span {
-  display: block;
-  width: 30px;
-  height: 3px;
-  background-color: #fff;
-  margin-bottom: 5px;
-  transition: transform 0.2s ease-in-out;
-}
-
-.app-header nav .burger span:last-child {
-  margin-bottom: 0;
-}
-
-.app-header nav .burger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.app-header nav .burger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.app-header nav .burger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Tooltip */
