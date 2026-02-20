@@ -1,22 +1,45 @@
-const burger = document.querySelector(".burger");
-    const navMenu = document.querySelector("nav ul");
+// Smooth scroll for internal anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e){
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if(target){
+      target.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+});
 
-    burger.addEventListener("click", () => {
-        burger.classList.toggle("active");
-        navMenu.classList.toggle("open");
-        document.body.classList.toggle("menu-open");
+// Product card hover animation already handled by CSS
+// Optional: Add dynamic "back to top" button
+const backToTop = document.createElement('button');
+backToTop.innerText = "↑ Top";
+backToTop.id = "backToTop";
+document.body.appendChild(backToTop);
 
-        // ARIA support
-        const expanded = burger.classList.contains("active");
-        burger.setAttribute("aria-expanded", expanded);
-    });
+backToTop.style.cssText = `
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 15px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+`;
 
-    // Close menu when clicking a link (mobile)
-    document.querySelectorAll("nav ul li a").forEach(link => {
-        link.addEventListener("click", () => {
-            navMenu.classList.remove("open");
-            burger.classList.remove("active");
-            document.body.classList.remove("menu-open");
-            burger.setAttribute("aria-expanded", "false");
-        });
-    });
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 300){
+    backToTop.style.display = "block";
+  } else {
+    backToTop.style.display = "none";
+  }
+});
+
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
